@@ -1,0 +1,13 @@
+{
+	"name": "myjsdb",
+	"description": "Enables storage and query of JSON in MySql",
+	"version": "0.0.1",
+	"contributors": [
+		{ "name": "Geoff Chappell", "email": "geoff@sover.net"}
+	],
+	"dependencies":{
+		"mysql": ">= 0.0.1"
+	},
+	"main": "index",
+	"engines": {"node": ">= 0.4.1"}
+}
