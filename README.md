@@ -10,7 +10,7 @@ Only basic functionality so far -- you can put documents and perform basic query
 
 ## Contributors
 
-* Geoff Chappell ([geochap](https://github.com/geochap)- Author and maintainer
+* Geoff Chappell ([geochap])(https://github.com/geochap) - Author and maintainer
 
 ##Installation
 
