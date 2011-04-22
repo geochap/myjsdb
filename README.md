@@ -31,11 +31,15 @@ Only basic functionality so far -- you can put documents and perform basic query
     //so we can skip the callbacks in most cases and not chain the calls
     store.open();
 
+    //store.create();
+
     store.putDocument('test', {name:'geoff', age:44, knows:{name:'derrish'}});
 
     store.query({age:person.age, name:person.name}, function(err, res){
         console.log(res);
     });
+
+    //store.remove();
 
     store.close();
 
