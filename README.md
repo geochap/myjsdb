@@ -27,19 +27,17 @@ Only basic functionality so far -- you can put documents and perform basic query
 
     person.age.gt(10);
 
-    //we can be lazy and rely on the queuing effect of the underlying mysql module
-    //so we can skip the callbacks in most cases and not chain the calls
-    store.open();
+    store.open(function(err){
+        store.remove(function(err){
+            store.create(function(err){
+                store.putDocument('test', {name:'geoff', age:44, knows:{name:'derrish'}}, function(err){
+                    store.query({age:person.age, name:person.name}, function(err, res){
+                        console.log(res);
+                        store.close();
+                    });
 
-    //store.create();
-
-    store.putDocument('test', {name:'geoff', age:44, knows:{name:'derrish'}});
-
-    store.query({age:person.age, name:person.name}, function(err, res){
-        console.log(res);
+                });
+            });
+        });
     });
-
-    //store.remove();
-
-    store.close();
 
